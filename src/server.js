@@ -26,3 +26,6 @@ app.use(adminJS.options.rootPath, router);
 app.listen(port, () => {
   console.log(`AdminJS is running in http://localhost:${port}${adminJS.options.rootPath}`);
 });
+
+// https://www.youtube.com/watch?v=_pLOceLpRjo
+// parei no min: 43:00
