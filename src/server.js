@@ -7,6 +7,8 @@ import AdminJSExpress from '@adminjs/express';
 import AdminJSSequelize from '@adminjs/sequelize';
 import express from 'express';
 
+import User from './models/user';
+
 AdminJS.registerAdapter(AdminJSSequelize);
 
 const port = 3000;
@@ -16,7 +18,7 @@ const app = express();
 const adminJS = new AdminJS({
   databases: [],
   rootPath: '/admin',
-  resources: [],
+  resources: [User],
 });
 
 const router = AdminJSExpress.buildRouter(adminJS);
@@ -28,4 +30,4 @@ app.listen(port, () => {
 });
 
 // https://www.youtube.com/watch?v=_pLOceLpRjo
-// parei no min: 
+// parei no min: 1:17:00
